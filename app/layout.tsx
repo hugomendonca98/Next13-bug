@@ -1,9 +1,8 @@
-import Container from "../components/Container";
-import TopNav from "../components/TopNav";
+import { ReactNode } from "react";
 import GlobalStyles from "./GlobalStyles";
 import RootStyleRegistry from "./RootStyleRegistry";
 
-export default function RootLayout({ children }: { children: JSX.Element }) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html>
       <head>
@@ -13,7 +12,6 @@ export default function RootLayout({ children }: { children: JSX.Element }) {
         <RootStyleRegistry>
           <div>
             <GlobalStyles />
-            <TopNav />
             {children}
           </div>
         </RootStyleRegistry>
